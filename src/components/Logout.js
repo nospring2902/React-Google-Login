@@ -2,7 +2,7 @@
 import React from 'react';
 import { googleLogout } from '@react-oauth/google';
 
-function Logout() {
+function logout() {
   const onLogout = () => {
     googleLogout();  // Thực hiện đăng xuất
     console.log('Logout successful!');
@@ -15,4 +15,4 @@ function Logout() {
   );
 }
 
-export default Logout;
+export default logout;

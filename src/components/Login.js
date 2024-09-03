@@ -2,9 +2,9 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 
-function Login() {
-  const onSuccess = (credentialResponse) => {
-    console.log('Login Success:', credentialResponse);
+function login() {
+  const onSuccess = (response) => {
+    console.log('Login Success:', response);
   };
 
   const onFailure = (error) => {
@@ -21,4 +21,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default login;

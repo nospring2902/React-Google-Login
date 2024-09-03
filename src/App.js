@@ -1,8 +1,8 @@
 // src/App.js
 import React from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import Login from './components/Login';
-import Logout from './components/Logout';
+import login from './components/Login';
+import logout from './components/Logout';
 
 const clientId = '86933214019-a8usoan0tlj8sc116q0npudn4ftn9lu4.apps.googleusercontent.com';
 
@@ -11,8 +11,8 @@ function App() {
     <GoogleOAuthProvider clientId={clientId}>
       <div className="App">
         <h1>Google Login Example</h1>
-        <Login />
-        <Logout />
+        <login />
+        <logout />
       </div>
     </GoogleOAuthProvider>
   );
