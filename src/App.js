@@ -1,21 +1,26 @@
-// src/App.js
 import React from 'react';
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import login from './components/Login';
-import logout from './components/Logout';
-
-const clientId = '86933214019-a8usoan0tlj8sc116q0npudn4ftn9lu4.apps.googleusercontent.com';
+import { GoogleLogin } from '@react-oauth/google';
 
 function App() {
-  return (
-    <GoogleOAuthProvider clientId={clientId}>
-      <div className="App">
-        <h1>Google Login Example</h1>
-        <login />
-        <logout />
-      </div>
-    </GoogleOAuthProvider>
-  );
+    const responseMessage = (response) => {
+        console.log('Login Success:', response);
+    };
+
+    const errorMessage = (error) => {
+        console.log('Login Error:', error);
+    };
+
+    return (
+        <div>
+            <h2>React Google Login</h2>
+            <br />
+            <br />
+            <GoogleLogin 
+                onSuccess={responseMessage} 
+                onError={errorMessage} 
+            />
+        </div>
+    );
 }
 
 export default App;
